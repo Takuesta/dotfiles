@@ -1,5 +1,5 @@
 alias dotfiles='/usr/bin/git --git-dir=/home/vagrant/.dotfiles/ --work-tree=/home/vagrant'
-alias ls="ls -lFG"
+alias ls="ls -lF"
 alias hg="history | grep"
 
 PS1="\[\e[0;37m\][\u@\h \W]\$ \[\e[0m\]" 
