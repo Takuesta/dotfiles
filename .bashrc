@@ -1,5 +1,12 @@
-alias dotfiles='/usr/bin/git --git-dir=/home/vagrant/.dotfiles/ --work-tree=/home/vagrant'
-alias ls="ls -lF"
+alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
+
+if [ "$(uname -s)" == "Darwin" ];then
+    alias ls="ls -lFG"
+else
+    alias ls="ls -alFh --color"
+fi
+alias grep="grep --color=always"
+alias sc='sudo systemctl'
 alias hg="history | grep"
 
 PS1="\[\e[0;37m\][\u@\h \W]\$ \[\e[0m\]" 
