@@ -1,0 +1,12 @@
+"\C-j": backward-word
+# On Mac, Ctrl+o is not working by default. To enable, run `stty discard undef` command.
+"\C-o": forward-word
+"\C-g": kill-word
+
+# On Mac, case-sensitive is default.
+set completion-ignore-case on
+
+# set input-meta on                                                                                             
+# set output-meta on  
+# set convert-meta off
+
