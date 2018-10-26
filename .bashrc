@@ -5,11 +5,15 @@ if [ "$(uname -s)" == "Darwin" ];then
 else
     alias ls="ls -alFh --color"
 fi
-alias grep='grep -iI --color=auto \
+alias grep="grep -iI --color=auto \
     --exclude-dir={.svn,.git,.cache,.sass-cache} \
-    --exclude={*.swp*,*.swap*,*.svn*,*.git*,*.tmp*}'
-alias sc='sudo systemctl'
-alias hg="history | grep"
+    --exclude={*.swp*,*.swap*,*.svn*,*.git*,*.tmp*}"
+
+alias rpbcopy="ssh mac.local pbcopy"
+
+alias sc="sudo systemctl"
+
+alias hgrep="history | grep"
 
 PS1="\[\e[0;36m\][\u@\h \W]\j/\$ \[\e[0m\]" 
 # 39 Default
