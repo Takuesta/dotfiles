@@ -1,3 +1,5 @@
+set colored-stats on
+
 "\C-j": backward-word
 # On Mac, Ctrl+o is not working by default. To enable, run `stty discard undef` command.
 "\C-o": forward-word

@@ -5,11 +5,14 @@ if [ "$(uname -s)" == "Darwin" ];then
 else
     alias ls="ls -alFh --color"
 fi
-alias grep="grep --color=always"
+alias grep='grep -iI --color=auto \
+    --exclude-dir={.svn,.git,.cache,.sass-cache} \
+    --exclude={*.swp*,*.swap*,*.svn*,*.git*,*.tmp*}'
 alias sc='sudo systemctl'
 alias hg="history | grep"
 
-PS1="\[\e[0;37m\][\u@\h \W]\$ \[\e[0m\]" 
+# PS1="\[\e[0;36m\][\u@\h \W]\$ \[\e[0m\]" 
+PS1="\[\e[0;36m\][\u@gcsapp.local \W]\j/\$ \[\e[0m\]" 
 # 39 Default
 # 30 Black
 # 31 Red
