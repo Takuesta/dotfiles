@@ -11,8 +11,7 @@ alias grep='grep -iI --color=auto \
 alias sc='sudo systemctl'
 alias hg="history | grep"
 
-# PS1="\[\e[0;36m\][\u@\h \W]\$ \[\e[0m\]" 
-PS1="\[\e[0;36m\][\u@gcsapp.local \W]\j/\$ \[\e[0m\]" 
+PS1="\[\e[0;36m\][\u@\h \W]\j/\$ \[\e[0m\]" 
 # 39 Default
 # 30 Black
 # 31 Red
