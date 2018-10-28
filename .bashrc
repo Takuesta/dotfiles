@@ -1,17 +1,19 @@
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
 if [ "$(uname -s)" == "Darwin" ];then
-    alias ls="ls -lFG"
+    alias ls="ls -lFhG"
 else
     alias ls="ls -alFh --color"
+    
+    # # move to /usr/local/bin as command
+    # alias rpbcopy="ssh mac.local pbcopy"
+
+    alias sc="sudo systemctl"
 fi
+
 alias grep="grep -iI --color=auto \
     --exclude-dir={.svn,.git,.cache,.sass-cache} \
     --exclude={*.swp*,*.swap*,*.svn*,*.git*,*.tmp*}"
-
-alias rpbcopy="ssh mac.local pbcopy"
-
-alias sc="sudo systemctl"
 
 alias hgrep="history | grep"
 
