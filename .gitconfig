@@ -1,0 +1,23 @@
+[user]
+    name = takuesta
+    email = takuesta@gmail.com
+[alias]
+    l = log
+    st = status
+    cm = commit
+    br = branch
+    brl = "!sh git-branch-list"
+    branch-list = "!sh git-branch-list"
+    co = checkout
+    coi = "!sh git-checkout-id ${1}"
+    checkout-id = "!sh git-checkout-id ${1}"
+    sub-add = "!f () { git subtree add --prefix=${1}  --squash ${1}  ${2} ;};f"
+    sub-pull = "!f () { git subtree pull --prefix=${1}  --squash ${1}  ${2} ;};f"
+    sub-push = "!f () { git subtree push --prefix=${1}  --squash ${1}  ${2} ;};f"
+    sub-push-force = "!f() { git push ${1} `git subtree split --prefix ${1} master`:master --force; }; f"
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = false
+[push]
+	default = upstream
