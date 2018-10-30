@@ -11,7 +11,7 @@ else
     alias sc="sudo systemctl"
 fi
 
-alias grep="grep -iI --color=auto \
+alias grep="grep -I --color=auto \
     --exclude-dir={.svn,.git,.cache,.sass-cache} \
     --exclude={*.swp*,*.swap*,*.svn*,*.git*,*.tmp*}"
 
