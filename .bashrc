@@ -1,5 +1,12 @@
+# Source global definitions                                                                                   
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# dotfiles
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
+# aliases
 if [ "$(uname -s)" == "Darwin" ];then
     alias ls="ls -lFhG"
 else
@@ -19,10 +26,12 @@ alias grep="grep -I --color=auto \
 
 alias hgrep="history | grep -i"
 
+alias mysql="mysql --prompt='\d> ' --pager='less -S -F'"
+
 # share history
 PROMPT_COMMAND=`history -a`
 shopt -u histappend
-# export HISTSIZE=999
+export HISTSIZE=2000
 
 # PS1="\[\e[0;36m\][\u@\h \W]\j/\$ \[\e[0m\]" 
 # 39 Default
