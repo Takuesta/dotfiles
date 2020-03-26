@@ -19,10 +19,16 @@ alias grep="grep -I --color=auto \
 
 alias hgrep="history | grep -i"
 
+alias mysql="mysql --prompt='\d> ' --pager='less -S -F'"
+
+alias vmstart="VBoxManage startvm --type headless "
+alias vmstop='function _vmstop(){ VBoxManage controlvm "$1" acpipowerbutton;};_vmstop'
+alias vmlist="VBoxManage list runningvms "
+
 # share history
 PROMPT_COMMAND=`history -a`
 shopt -u histappend
-# export HISTSIZE=999
+export HISTSIZE=3000
 
 # PS1="\[\e[0;36m\][\u@\h \W]\j/\$ \[\e[0m\]" 
 # 39 Default
