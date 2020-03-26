@@ -1,5 +1,12 @@
+# Source global definitions                                                                                   
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# dotfiles
 alias dotfiles="/usr/bin/git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME}"
 
+# aliases
 if [ "$(uname -s)" == "Darwin" ];then
     alias ls="ls -lFhG"
 else
